@@ -14,5 +14,5 @@ data = {
 }
 
 #Write data into json
-with open("test2.json", "w") as write_file:
+with open("urls.json", "w") as write_file:
     json.dump(data, write_file)
