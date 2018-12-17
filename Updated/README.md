@@ -1,7 +1,7 @@
 Changes made
 
 JSONCreate.py: uses python code to generate a JSON document
-test2.json: file which contains name of paper and the RSS feed link
+urls.json: file which contains name of paper and the RSS feed link
 
 db_functions.py: uses python and sqlite to create a DB, paperstuff
 
