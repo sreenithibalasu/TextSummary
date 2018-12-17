@@ -8,3 +8,5 @@ sqlTry1: uses python and sqlite to create a DB, paperstuff
 textSummarizer.py: contains page rank algorithm
 
 main.py: contains code which calls the above file and summarizes text, storing it in a database
+
+get.py: to view the first 5 contents in the DB
