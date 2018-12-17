@@ -3,7 +3,7 @@ Changes made
 JSONCreate.py: uses python code to generate a JSON document
 test2.json: file which contains name of paper and the RSS feed link
 
-sqlTry1: uses python and sqlite to create a DB, paperstuff
+db_functions.py: uses python and sqlite to create a DB, paperstuff
 
 textSummarizer.py: contains page rank algorithm
 
