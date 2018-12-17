@@ -8,7 +8,7 @@ data = {
         },
         {
             "name": "Financial Express",
-            "url": "https://www.financialexpress.com/feed/"
+            "url": "https://www.financialexpress.com/industry/banking-finance/feed/"
         }
     ]
 }
