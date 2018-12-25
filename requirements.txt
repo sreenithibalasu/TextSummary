@@ -1,6 +1,5 @@
-numpy==1.15.4
-feedparser==5.2.1
 nltk==3.3
-SQLAlchemy==1.2.14
+feedparser==5.2.1
 newspaper3k==0.2.6
+numpy==1.15.4
 newspaper==0.1.0.7
