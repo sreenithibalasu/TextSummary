@@ -11,8 +11,10 @@ import warnings
 import csv
 app = Flask(__name__, template_folder='templates')
 
-@app.route('/inp')
+@app.route('/', methods=['POST', 'GET'])
 def summary():
+    if request.method == 'POST' or request.method == 'GET':
+        return render_template("inp.html")
     return render_template("inp.html")
 
 @app.route('/out', methods=['POST', 'GET'])
@@ -32,8 +34,6 @@ def out():
         article_title = article.title
 
         warnings.filterwarnings('ignore')
-
-
 
         stop_words = stopwords.words('english')
 
@@ -55,7 +55,9 @@ def out():
                 cur.execute("INSERT INTO Paper VALUES(?,?,?)",(name.encode(), article_title.encode(), temp.encode()))
                 counter+=1
 
-        return jsonify({'summary':temp})
+        temp = temp.split("\n")
+        # return jsonify({'summary':temp})
+        return render_template('out.html', temp=temp, url=url)
 
 if __name__ == '__main__':
     app.run(debug = True)

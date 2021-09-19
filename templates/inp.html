@@ -1,9 +1,78 @@
 <!doctype html>
 <html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+  <style>
+    h1 {
+      position: relative;
+      font-family: 'Raleway', sans-serif;
+  }
+
+  h1 span {
+      background-color: white;
+      padding-right: 10px;
+  }
+
+  h1:after {
+      content:"";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 0.5em;
+      border-top: 1px solid black;
+      z-index: -1;
+  }
+  input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+}
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: 'Raleway', sans-serif;
+}
+p {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  margin: 2em;
+}
+  </style>
+  <title> Text Summarizer </title>
+</head>
    <body>
+      <h1 style="text-align:center;"> <span> Text Summarizer</span></h1>
       <form action = "http://localhost:5000/out" method = "POST">
-         <p>URL <input type = "text" name = "URL" /></p>
-         <p><input type = "submit" value = "submit" /></p>
+         <p style="font-family: 'Raleway', sans-serif; font-size: 25px;">Enter URL to a news article <input type = "text" name = "URL" /></p>
+         <p style="font-family: 'Raleway', sans-serif; font-size: 25px;"><input type = "submit" value = "SUBMIT" /></p>
       </form>
+      <h1 style="text-align:center;"> <span> How does it work? </span></h1>
+      <p> This is a news article summarizer that takes the link of a news article, does some really simple yet complicated math, and returns
+        a summary of what the article is talking about </p>
+      <p> It uses an algorithm called Text Rank - which is a modified version of Page Rank. Page Rank is an algorithm used in search engines such  as
+        Google to link and rank webpages for a particular search. </p>
+
+      <h1 style="text-align:center;"> <span> Steps Taken </span></h1>
+      <p> 1. Using <b>Python</b> and the <b>BeautifulSoup</b> module, I was able to extract the links from the RSS feeds of different newspaper franchises. </p>
+      <p> 2. After extracting the article content, I stored the content and title in two seperate lists. </p>
+      <p> 3. I ran the contents of the article through the <b>TextRank algorithm</b>. The algorithm splits the different sentences and vectorizes them. </p>
+      <p> 4. Text Rank generates a similarity score for all the vectors and picks the sectences with top 5 scores. </p>
+      <p> 5. To save the summaries and links, I used SQLAlchemy to construct a database. </p>
+      <p> I used Python and <b>Flask</b> to create these webppages and links between them! </p>
+
+
    </body>
 </html>
