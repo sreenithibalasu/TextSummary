@@ -9,6 +9,8 @@
 
 ## Usage Notes
 
+Python version: 3.7.4
+
 1. Clone repository on local machine
 `git clone https://github.com/sreenithibalasu/TextSummary.git`
 2. Make a python virtual environment
